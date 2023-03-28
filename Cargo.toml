@@ -1,0 +1,13 @@
+[package]
+name = "unwrap_to_question_mark_challenge"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reqwest = { version = "0.11.16", features = ["blocking"] }
+scraper = "0.15.0"
+serde_json = "1.0.95"
+
+[dev-dependencies]
+assert_cmd = "2.0.8"
+more-asserts = "0.3.1"
