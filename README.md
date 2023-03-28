@@ -10,5 +10,7 @@ The `unwrap` makes any error immediately crash your program and unwind. While th
 
 Changing from unwrap to ? can be tricky though, especially in situations (like this one) where a function could throw different kinds of errors. The hypothesis is that by solving this relatively simple unwrap-to-? you learn how to go from unwrap to ? in general!
 
-## How To Submit
+<br/>
+
+## How To Submit A Solution
 Open a PR with your refactorings to submit your solution!
