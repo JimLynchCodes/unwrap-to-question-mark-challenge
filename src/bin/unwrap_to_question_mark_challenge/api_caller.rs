@@ -4,7 +4,7 @@
 //!
 //!    The goal here is to refactor this code to change all "unwrap()" calls to ? operator...
 //!
-//!    BONUS - Try to change "unwrap" to ? in the integration test too!
+//!    BONUS - Try to change "unwrap" to ? in the integration test and in main.rs as well!
 
 use reqwest::blocking::get;
 use serde_json::{Result, Value};
