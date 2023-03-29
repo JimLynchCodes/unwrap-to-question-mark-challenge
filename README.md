@@ -13,4 +13,4 @@ Changing from unwrap to ? can be tricky though, especially in situations (like t
 <br/>
 
 ## How To Submit A Solution
-Open a PR with your refactorings to submit your solution!
+Open a PR with your refactorings to submit your solution! No cheating! 😜

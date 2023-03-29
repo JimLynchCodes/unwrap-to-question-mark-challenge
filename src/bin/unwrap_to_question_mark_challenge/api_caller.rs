@@ -7,11 +7,13 @@
 //!    BONUS - Try to change "unwrap" to ? in the integration test and in main.rs as well!
 
 use reqwest::blocking::get;
-use serde_json::{Result, Value};
+use serde_json::Value;
+use std::error::Error;
 
-pub fn get_some_json() -> Result<Value> {
-    const url: &str = "https://www.boredapi.com/api/activity";
-    let resp = get(url).unwrap().text().unwrap();
-    let json: Value = serde_json::from_str(&resp).unwrap();
-    Ok(json)
+pub fn get_some_json() -> Result<Value, Box::<dyn Error>> {
+    const URL: &str = "https://www.boredapi.com/api/activity";
+    
+    let resp = get(URL)?.text()?;
+    
+    serde_json::from_str::<Value>(&resp).map_err(Box::<dyn Error>::from)
 }
