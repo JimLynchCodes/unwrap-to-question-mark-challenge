@@ -15,6 +15,5 @@ pub fn get_some_json() -> Result<Value, Box::<dyn Error>> {
     
     let resp = get(URL)?.text()?;
     
-    serde_json::from_str::<Value>(&resp)
-        .map_err(|err| Box::<dyn Error>::from(err))
+    serde_json::from_str::<Value>(&resp).map_err(Box::<dyn Error>::from)
 }
